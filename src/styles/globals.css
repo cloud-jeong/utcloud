@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', 'Apple SD Gothic Neo', sans-serif;
+  }
+}
+
+@layer components {
+  /* Navbar scroll effect */
+  #navbar {
+    transition: box-shadow 0.3s;
+  }
+  #navbar.scrolled {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Hero gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #2d82f5 0%, #174fd8 60%, #11255c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Section dot */
+  .section-dot {
+    width: 6px;
+    height: 6px;
+    background: #2d82f5;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* Service card hover */
+  .service-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 40px rgba(45, 130, 245, 0.18);
+  }
+
+  /* Project card overlay */
+  .project-card .overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .project-card:hover .overlay {
+    opacity: 1;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    background: #2d82f5;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  }
+  .btn-primary:hover {
+    background: #174fd8;
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(45, 130, 245, 0.35);
+  }
+  .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(45, 130, 245, 0.4);
+  }
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #2d82f5;
+    border: 2px solid #2d82f5;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+  }
+  .btn-outline:hover {
+    background: #2d82f5;
+    color: #fff;
+    transform: scale(1.02);
+  }
+  .btn-outline:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(45, 130, 245, 0.4);
+  }
+  .btn-outline:active {
+    transform: scale(0.98);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: #374151;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .btn-ghost:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+    transform: scale(1.02);
+  }
+  .btn-ghost:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.2);
+  }
+  .btn-ghost:active {
+    transform: scale(0.98);
+  }
+
+  /* Nav link */
+  .nav-link {
+    position: relative;
+    color: #374151;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2d82f5;
+    transition: width 0.25s;
+  }
+  .nav-link:hover {
+    color: #2d82f5;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Form input focus */
+  .form-input {
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: #2d82f5;
+    box-shadow: 0 0 0 3px rgba(45, 130, 245, 0.15);
+  }
+
+  /* Stat number */
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #2d82f5;
+  }
+
+  /* About Modal */
+  #about-modal {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  #about-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #about-modal-box {
+    transform: scale(0.95) translateY(8px);
+    transition: transform 0.25s ease;
+  }
+  #about-modal.open #about-modal-box {
+    transform: scale(1) translateY(0);
+  }
+
+  /* Fade-in on scroll */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Mobile menu */
+  #mobile-menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+  }
+  #mobile-menu.menu-hidden {
+    max-height: 0;
+    opacity: 0;
+  }
+  #mobile-menu.menu-open {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
