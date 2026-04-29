@@ -9,7 +9,6 @@ export default function ContactPage() {
 			{/* <ContactForm /> */}
 			<div className="text-center mt-10 text-gray-600">
 				<p>이메일: cloud.jung@gmail.com</p>
-				<p>대표전화: 010-5300-5065</p>
 				주소: 경기도 용인시 기흥구 강남로 6, 6층 603-에이87호(구갈동,
 				비즈업오피스)
 			</div>

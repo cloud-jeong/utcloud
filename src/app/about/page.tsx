@@ -8,15 +8,15 @@ export default function AboutPage() {
 			<div className="text-center text-gray-600">
 				<p className="text-2xl mb-10 text-blue-300">
 					UTCloud는 Cloud Native 기술 기반의 인프라 혁신을 선도하는 IT 전문
-					기업입니다. <br /> 우리는 Kubernetes, DevOps, Observability,
-					Infrastructure as Code(IaC) 등 최신 기술을 바탕으로 <br />
+					기업입니다. <br /> Kubernetes, DevOps, Observability, Infrastructure
+					as Code(IaC) 등 최신 기술을 바탕으로 <br />
 					고객의 비즈니스 민첩성과 운영 효율성을 극대화합니다.
 				</p>
 
 				<h3 className="text-4xl  mb-10 font-bold text-center text-zinc-400">
 					핵심 가치
 				</h3>
-				<ul className="text-2xl mb-10">
+				<ul className="text-2xl mb-10 text-blue-300">
 					<li>
 						<strong>Unique Technology</strong> – 차별화된 기술력으로 클라우드
 						전환의 새로운 표준을 제시합니다.
@@ -64,7 +64,6 @@ export default function AboutPage() {
 			</div>
 
 			<div className="text-center mt-10 text-gray-600">
-				<p>대표전화: 010-5300-5065</p>
 				주소: 경기도 용인시 기흥구 강남로 6, 6층 603-에이87호(구갈동,
 				비즈업오피스)
 			</div>
